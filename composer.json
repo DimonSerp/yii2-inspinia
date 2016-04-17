@@ -13,6 +13,11 @@
     "require": {
         "yiisoft/yii2": "*",
         "bower-asset/fontawesome": "*"
+        "bower-asset/ionrangeslider": "*",
+        "bower-asset/knob": "*",
+        "bower-asset/switchery": "*",
+        "bower-asset/cropper": "*",
+        "bower-asset/chosen": "*"
     },
     "autoload": {
         "psr-4": {

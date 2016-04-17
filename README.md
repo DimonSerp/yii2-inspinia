@@ -57,7 +57,9 @@ Customization
 Components
 ----------
 **Header block and breadcrumbs**
+
 Structure
+
 ```
 <div class="col-sm-12">
     <h2>Title</h2>
@@ -67,12 +69,26 @@ Structure
     ]) ?>
 </div>
 ```
+
 To change it use:
+
 ```
-$this->beginBlock('content-header'); ?>
+<?php $this->beginBlock('content-header'); ?>
 About <small>static page</small>
 <?php $this->endBlock(); ?>
 ```
+
+Add this block and use header right toolbar
+
+```
+<?php $this->beginBlock('content-header-actions'); ?>
+<a href="<?=Url::to(['create'])?>" class="btn btn-primary">
+    <i class="fa fa-fw fa-plus"></i>
+    <?=\Yii::t('reference', 'Create filial')?>
+</a>
+<?php $this->endBlock(); ?>
+```
+
 
 **Middle box**
 ```
