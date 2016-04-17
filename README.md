@@ -2,6 +2,9 @@ Inspinia Admin Theme
 ====================
 Inspinia 2.4 asset widgets
 
+Buy license to this theme https://wrapbootstrap.com/theme/inspinia-responsive-admin-theme-WB0R5L90S
+===
+
 Installation
 ------------
 
