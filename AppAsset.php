@@ -15,17 +15,23 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@vendor/maxyc/yii2-inspinia-asset/assets';
     public $css = [
         'css/animate.css',
         'css/style.css'
     ];
     public $js = [
+        'js/plugins/metisMenu/jquery.metisMenu.js',
+        'js/plugins/slimscroll/jquery.slimscroll.min.js',
+
+        'js/inspinia.js',
+        'js/plugins/pace/pace.min.js'
     ];
     public $depends = [
+        'yii\jui\JuiAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset',
         'maxyc\inspinia\FontawesomeAsset'
     ];
 }
