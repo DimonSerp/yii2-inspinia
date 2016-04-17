@@ -56,7 +56,9 @@ Customization
     
 Components
 ----------
-**Header block and breadcrumbs**
+
+Header block and breadcrumbs
+---
 
 Structure
 
@@ -90,7 +92,8 @@ Add this block and use header right toolbar
 ```
 
 
-**Middle box**
+Middle box
+---
 ```
 <div class="middle-box text-center animated fadeInRightBig">
     <h3 class="font-bold">This is page content</h3>
@@ -102,7 +105,8 @@ Add this block and use header right toolbar
 </div>
 ```
 
-**Panels**
+Panels
+---
 Usage:
 ```
 <?php Panel::begin([
@@ -121,7 +125,7 @@ Usage:
 <?php Panel::end()?>
 ```
 
-Configurations:
+**Configurations:**
 title  - Title of panel;
 description - Description panel (right from title)
 footer - footer text
@@ -157,3 +161,22 @@ example
 
 collapse_button  true if panel collapable
 close_button     true if panel closable
+
+ionRangeSlider widget
+---
+```
+<?= $form->field($model, 'work_time')->widget(\maxyc\inspinia\widgets\ionRangeSlider::className(), [
+    'clientOptions'=>[
+        'type'=>'double',
+        'grid'=>true,
+        'min'=>0,
+        'max'=>'24',
+        'from'=>10,
+        'to'=>18,
+        'step'=>'.01',
+        'prefix'=> \Yii::t('reference', 'Worktime:'),
+        'decorate_both'=> false,
+        'values_separator'=>  ' '.\Yii::t('reference', 'to').' ',
+    ]
+]) ?>
+```

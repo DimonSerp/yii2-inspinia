@@ -17,6 +17,7 @@
         "bower-asset/knob": "*",
         "bower-asset/switchery": "*",
         "bower-asset/cropper": "*",
+        "bower-asset/momentjs": "*",
         "bower-asset/chosen": "*"
     },
     "autoload": {
