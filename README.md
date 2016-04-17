@@ -53,6 +53,23 @@ Customization
     
 Components
 ----------
+**Header block and breadcrumbs**
+Structure
+```
+<div class="col-sm-12">
+    <h2>Title</h2>
+
+    <?=Breadcrumbs::widget([
+        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+    ]) ?>
+</div>
+```
+To change it use:
+```
+$this->beginBlock('content-header'); ?>
+About <small>static page</small>
+<?php $this->endBlock(); ?>
+```
 
 **Middle box**
 ```
@@ -65,3 +82,59 @@ Components
     </div>
 </div>
 ```
+
+**Panels**
+Usage:
+```
+<?php Panel::begin([
+    'title'=>$this->title,
+    'description'=> 'same text',
+    'toolbar'=>[
+        ...
+    ]
+])?>
+
+    <?php echo GridView::widget([
+        'dataProvider' => $dataProvider,
+        'tableOptions' => ['class' => 'table table-hover']
+    ]); ?>
+    
+<?php Panel::end()?>
+```
+
+Configurations:
+title  - Title of panel;
+description - Description panel (right from title)
+footer - footer text
+
+toolbar - panel's menu
+example
+```
+'toolbar'=>[
+        [
+            'title' => '',
+            'link'  => Url::to(['/']),
+            'icon'  => 'wrench',
+            'items' => [
+                [
+                    'title' => 'Item 1',
+                    'link'  => Url::to(['/']),
+                    'icon'  => 'earth',
+                ],
+                [
+                    'title' => 'Item 2',
+                    'link'  => Url::to(['/']),
+                    'icon'  => 'pencil',
+                ],
+            ],
+        ],
+        [
+            'title' => '',
+            'link'  => Url::to(['http://vk.com']),
+            'icon'  => 'vk',
+        ]
+    ]
+```
+
+collapse_button  true if panel collapable
+close_button     true if panel closable
