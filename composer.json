@@ -18,6 +18,7 @@
         "bower-asset/switchery": "*",
         "bower-asset/cropper": "*",
         "bower-asset/momentjs": "*",
+        "bower-asset/select2": "*",
         "bower-asset/chosen": "*"
     },
     "autoload": {
