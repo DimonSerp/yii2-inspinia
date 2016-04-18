@@ -11,8 +11,6 @@ class FlotAsset extends \yii\web\AssetBundle
     public $sourcePath = '@bower/flot';
     public $js = [
         'jquery.flot.js',
-        'jquery.flot.tooltip.js',
-        'jquery.flot.spline.js',
         'jquery.flot.resize.js',
         'jquery.flot.pie.js',
         'jquery.flot.symbol.js',
