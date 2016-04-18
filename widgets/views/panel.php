@@ -30,7 +30,7 @@
                     <?php else:?>
                         <a href="<?=$item['link']?>">
                             <?=$item['icon']?'<i class="fa fa-'.$item['icon'].'"></i>':''?>
-                            <?=$item['title']?>
+                            <?=isset($item['title']) ? $item['title'] : ''?>
                         </a>
                     <?php endif?>
                 <?php endforeach?>
@@ -51,6 +51,7 @@
     <?php if($footer):?>
         <div class="ibox-footer">
             <?=$footer?>
+            <div class="clearfix"></div>
         </div>
     <?php endif?>
 </div>

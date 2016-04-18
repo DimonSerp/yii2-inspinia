@@ -45,6 +45,7 @@
 
                     <?=Breadcrumbs::widget([
                         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                        'activeItemTemplate' => "<li class=\"active\"><strong>{link}</strong></li>\n"
                     ]) ?>
                 </div>
                 <?php if(isset($this->blocks['content-header-actions'])):?>

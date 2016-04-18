@@ -6,17 +6,18 @@ namespace maxyc\inspinia;
  *
  * @package maxyc\inspinia
  */
-class ionRangeSliderAsset extends \yii\web\AssetBundle
+class MomentjsAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@bower/ionrangeslider';
-    public $css = [
-        'css/ion.rangeSlider.css',
-        'css/ion.rangeSlider.skinModern.css'
-    ];
+    public $sourcePath = '@bower/momentjs';
     public $js = [
-        'js/ion.rangeSlider.min.js',
+        'min/moment.min.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',
     ];
+
+    public function init()
+    {
+        $this->js[] = 'locale/'.strtolower(\Yii::$app->language).'.js';
+    }
 }
