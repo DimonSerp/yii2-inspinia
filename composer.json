@@ -18,7 +18,9 @@
         "bower-asset/switchery": "*",
         "bower-asset/cropper": "*",
         "bower-asset/momentjs": "*",
-        "bower-asset/chosen": "*"
+        "bower-asset/chosen": "*",
+        "bower-asset/jquery-sparkline": "*",
+        "bower-asset/flot": "*"
     },
     "autoload": {
         "psr-4": {

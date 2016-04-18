@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
@@ -9,7 +12,9 @@
     </div>
     <ul class="nav navbar-top-links navbar-right">
         <li>
-            <span class="m-r-sm text-muted welcome-message">Welcome</span>
+            <?php if(!\Yii::$app->user->isGuest): //die('<pre>'.print_r(\Yii::$app->user, true));?>
+            <span class="m-r-sm text-muted welcome-message">Welcome, <?=\Yii::$app->user->identity->username?></span>
+            <?php endif?>
         </li>
         <li class="dropdown">
             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -108,11 +113,20 @@
         </li>
 
 
+        <?php if(\Yii::$app->user->isGuest):?>
         <li>
-            <a href="login.html">
+            <a href="<?=Url::to(['/user/login'])?>">
+                <i class="fa fa-sign-in"></i> Login
+            </a>
+        </li>
+        <?php else:?>
+        <li>
+            <a href="<?=Url::to(['/user/logout'])?>" data-method="post">
                 <i class="fa fa-sign-out"></i> Log out
             </a>
         </li>
+
+        <?php endif?>
     </ul>
 
 </nav>
