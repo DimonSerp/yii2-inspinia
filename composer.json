@@ -20,7 +20,10 @@
         "bower-asset/momentjs": "*",
         "bower-asset/chosen": "*",
         "bower-asset/jquery-sparkline": "*",
-        "bower-asset/flot": "*"
+        "bower-asset/flot": "*",
+        "bower-asset/flot.tooltip": "*",
+        "bower-asset/flot-spline": "*"
+
     },
     "autoload": {
         "psr-4": {
