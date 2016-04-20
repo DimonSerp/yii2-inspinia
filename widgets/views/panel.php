@@ -1,4 +1,5 @@
 <div class="ibox float-e-margins">
+    <?php if($title):?>
     <div class="ibox-title">
         <h5><?=$title?> <?=$description ? '<small class="m-l-sm">'.$description.'</small>' : ''?></h5>
 
@@ -45,6 +46,7 @@
         </div>
 
     </div>
+    <?php endif?>
     <div class="ibox-content">
         <?=$content?>
     </div>
