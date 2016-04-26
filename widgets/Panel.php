@@ -12,11 +12,12 @@ class Panel extends \yii\base\Widget
     public $title = '';
     public $description = '';
     public $footer = '';
+    public $image = '';
 
     public $toolbar = [];
 
-    public $collapse_button = true;
-    public $close_button    = true;
+    public $collapse_button = false;
+    public $close_button    = false;
 
     public function init()
     {
@@ -31,6 +32,7 @@ class Panel extends \yii\base\Widget
             'content'=>$content,
             'title'=>$this->title,
             'description'=>$this->description,
+            'image'=>$this->image,
             'toolbar'=>$this->toolbar,
             'footer'=>$this->footer,
             'collapse_button'=>$this->collapse_button,

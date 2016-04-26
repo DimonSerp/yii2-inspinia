@@ -47,6 +47,13 @@
 
     </div>
     <?php endif?>
+    <?php if($image):?>
+        <div class="ibox-content no-padding border-left-right">
+            <?php if($image):?>
+                <img src="<?=$image?>" class="img-responsive">
+            <?php endif?>
+        </div>
+    <?php endif?>
     <div class="ibox-content">
         <?=$content?>
     </div>

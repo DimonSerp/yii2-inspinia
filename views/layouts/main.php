@@ -40,7 +40,7 @@
             <?php if (isset($this->blocks['content-header'])) { ?>
                 <?= $this->blocks['content-header'] ?>
             <?php } else { ?>
-                <div class="col-sm-<?=isset($this->blocks['content-header-actions']) ? 4 : 12?>">
+                <div class="col-sm-<?=isset($this->blocks['content-header-actions']) ? 6 : 12?>">
                     <h2><?=$this->title?></h2>
 
                     <?=Breadcrumbs::widget([
@@ -49,7 +49,7 @@
                     ]) ?>
                 </div>
                 <?php if(isset($this->blocks['content-header-actions'])):?>
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <div class="title-action">
                             <?=$this->blocks['content-header-actions']?>
                         </div>
